@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="form" class="boite">
+        <form>
+            <input type="text" name="nom"/><br />
+            <input type="number" name="nbHabitants"/><br />
+            <input type="submit" value="ajouter" />
+        </form>
+    </div>
+    <div id="liste" class="boite">
+        <h3>Liste des quartiers</h3>
+        <ul>
+        </ul>
+    </div>
+    
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .faux{
+            border : 1px solid red;
+        }
+        .boite{
+            width: 300px;
+            border : 1px solid black;
+        }
+        
+        #form{
+            float: left;
+        }
+        form > input{
+            box-sizing: border-box;
+            width: 100%;
+        }
+        #liste{
+            float: right;
+        }
+        #liste > h3{
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js.js"></script>
+{% endblock %}
